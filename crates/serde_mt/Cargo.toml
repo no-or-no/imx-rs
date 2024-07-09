@@ -1,0 +1,17 @@
+[package]
+name = "serde_mt"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+byteorder = { workspace = true }
+log = { workspace = true, optional = true }
+num-traits = "0.2"
+with_crc = { path = "../with_crc" }
+
+[features]
+derive = []

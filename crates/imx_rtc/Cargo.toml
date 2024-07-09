@@ -1,0 +1,7 @@
+[package]
+name = "imx_rtc"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]

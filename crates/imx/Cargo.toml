@@ -1,0 +1,27 @@
+[package]
+name = "imx"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+imx_core = { path = "../imx_core" }
+imx_file = { path = "../imx_file", optional = true }
+imx_geo = { path = "../imx_geo", optional = true }
+imx_media = { path = "../imx_media", optional = true }
+imx_rtc = { path = "../imx_rtc", optional = true }
+tokio = { workspace = true }
+serde = { workspace = true }
+
+[features]
+default = ["tcp", "json"]
+full = ["tcp", "json", "geo", "file", "media", "rtc"]
+geo = ["imx_geo"]
+file = ["imx_file"]
+media = ["imx_media"]
+rtc = ["imx_rtc"]
+json = ["imx_core/serde_json"]
+mt = ["imx_core/serde_mt"]
+tcp = ["imx_core/tcp"]
+quic = ["imx_core/quic"]
+ws = ["imx_core/ws"]

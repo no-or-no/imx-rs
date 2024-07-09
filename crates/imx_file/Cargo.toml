@@ -1,0 +1,7 @@
+[package]
+name = "imx_file"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[dependencies]

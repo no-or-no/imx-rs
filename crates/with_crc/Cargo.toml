@@ -9,4 +9,4 @@ serde = { workspace = true }
 with_crc_derive = { path = "../with_crc_derive", optional = true }
 
 [features]
-derive = ["with_crc_derive"]
+derive = ["dep:with_crc_derive"]

@@ -14,12 +14,12 @@ tokio = { workspace = true }
 serde = { workspace = true }
 
 [features]
-default = ["tcp", "json"]
-full = ["tcp", "json", "geo", "file", "media", "rtc"]
-geo = ["imx_geo"]
-file = ["imx_file"]
-media = ["imx_media"]
-rtc = ["imx_rtc"]
+default = ["tcp", "mt"]
+full = ["tcp", "mt", "geo", "file", "media", "rtc"]
+geo = ["dep:imx_geo"]
+file = ["dep:imx_file"]
+media = ["dep:imx_media"]
+rtc = ["dep:imx_rtc"]
 json = ["imx_core/serde_json"]
 mt = ["imx_core/serde_mt"]
 tcp = ["imx_core/tcp"]

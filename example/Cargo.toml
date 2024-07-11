@@ -5,8 +5,8 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
-#imx = { path = "../imx", features = ["mt"] }
-imx = { path = "../crates/imx" }
+imx = { path = "../crates/imx", features = ["tcp", "json"], default-features = false }
+#imx = { path = "../crates/imx" }
 tokio = { workspace = true }
 log = { workspace = true }
 anyhow = { workspace = true }

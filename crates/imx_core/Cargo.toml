@@ -38,5 +38,5 @@ sha2 = { workspace = true }
 
 [features]
 tcp = []
-quic = ["quinn"]
-ws = ["tokio-tungstenite"]
+quic = ["dep:quinn"]
+ws = ["dep:tokio-tungstenite"]

@@ -102,7 +102,7 @@ impl<T: Transport, W: MsgWrap> Connection<T, W> {
 impl<T: Transport> Connection<T, Unencrypted> {
     async fn handshake(mut self) -> Result<Connection<T, Encrypted>> {
         info!("Handshake step1...");
-        let (rpc, step) = handshake::step1()?;
+        let (rpc, step) = handshake::step1(self.dc_id)?;
         let res = self.send_rpc(&rpc).await?;
         info!("Handshake step2...");
         let (rpc, step) = handshake::step2(step, res)?;
